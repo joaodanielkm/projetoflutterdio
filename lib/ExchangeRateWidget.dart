@@ -14,7 +14,7 @@ class _ExchangeRateWidgetState extends State<ExchangeRateWidget> {
   @override
   void initState() {
     super.initState();
-    _loadData(); // Carrega os dados ao iniciar
+    _loadData();
   }
 
   void _loadData() {

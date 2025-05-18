@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:projetoflutterdio/ExchangeRateWidget.dart';
 import 'package:projetoflutterdio/ExchangeService.dart';
 
+void main() {
+  runApp(const MyApp());
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -12,7 +16,6 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: const Text('API de Cotação Flutter')),
         body: RefreshIndicator(
           onRefresh: () async {
-            // Força a recarga (pode ser melhorado com um GlobalKey)
             await ExchangeService.fetchExchangeRate();
           },
           child: SingleChildScrollView(
